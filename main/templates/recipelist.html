@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1>Welcome to Gluten Free Cooking</h1>
+                <h3>Recipe List</h3>
+                {% for recipe in recipes %}
+                <h5>––––––––––––––––––––––––––––––</h5>
+                <h3><a href="/recipedetail/{{ recipe.title|slugify }}/">{{ recipe.title }}</a></h3>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock body %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+
+<section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+            <ul>
+                <h1>Recipe</h1>
+
+                <h2>{{ recipe.title }}</h2>
+
+                <h5>Socal Rank: {{ recipe.social_rank }}<br></h5>
+
+                <h3>Glutenfree: {{ recipe.glutenfree }}<br></h3>
+
+                <img src="/media/{{recipe.recipe_image}}" style='margin-bottom:40px'> </img>
+                <br>
+                <h3>Ingredients</h3>
+
+                {% for ingredient in recipe.ingredients.all %}
+                    
+                    <h5>{{ ingredient.name }}</h5>
+
+                {% endfor %}
+
+                <h4>Publisher: {{ recipe.publisher }}</h4>
+
+                Recipe ID: {{ recipe.recipe_id }}<br>
+
+                <a href="{{ recipe.f2f_url }}">{{ recipe.f2f_url }}</a><br>
+                
+                </ul>               
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+

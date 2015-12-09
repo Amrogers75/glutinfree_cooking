@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load staticfiles %}
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Glutenfree Cooking</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/grayscale.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/mystyle.css' %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="http://localhost:8001/">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Sorted by</span> First letter
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="http://127.0.0.1:8000/recipelist/">Recipe List</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="http://www.newgrains.com/">Ingredient Resource</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="http://www.findmeglutenfree.com/">Dine Out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    {% block body %}
+
+    {% endblock %}
+     <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Glutinfree Cooking</h2>
+                <p>Cutting out gluten from your diet may seem like a difficult and limiting task. Fortunately, there are many healthy and delicious foods that are naturally gluten-free!  <a href="https://celiac.org/live-gluten-free/glutenfreediet/food-options/">What can I eat?</a>Cutting out gluten from your diet may seem like a difficult and limiting task. Fortunately, there are many healthy and delicious foods that are naturally gluten-free! </p>
+                <p>This site was set up for those mothers and mother in laws, that care for those around them that they can find a meal to fit the needs of them and their family. While having the ability to find additional information and additional resources.</p>
+                <p>Not all of our recipes are gluten free they are identified by True being gluten free and False being non gluten free.</p>
+            </div>
+        </div>
+    </section>
+   
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Glutenfree Around the Web</h2>
+                <p>Some additional Resources we found to help</p>
+                {# <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a> #}
+                {# </p> #}
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://celiac.org/" class="btn btn-default btn-lg"> <span class="network-name">celiac.org</span></a>
+                    </li>
+                    <li>
+                        <a href="http://www.glutenfreeandmore.com/" class="btn btn-default btn-lg"> <span class="network-name">GF+M.com</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.glutenfree.com" class="btn btn-default btn-lg"> <span class="network-name">GF.com</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+ 
+   <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; But,Dad llc</p>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'js/grayscale.js' %}"></script>
+
+</body>
+
+</html>

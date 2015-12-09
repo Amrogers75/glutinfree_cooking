@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+
+<html>  
+<head>  
+    <title>Recipe</title>
+</head>  
+    <body>
+        <ol>
+            {% for recipe in recipelist %}
+                <li>{{ recipe.title }} *************** {{ recipe.ingredients.all }}</li>
+                    {% for ingredients in name %}
+                        <li>{{ recipe.ingredients.all }}</li>
+                    {% endfor %}
+
+            {% endfor %}
+        </ol>
+
+        {% if recipelist and recipelist.paginator.num_pages > 1 %}
+                <span class="step-links">
+                    {% if recipelist.has_previous %}
+                        <a href= "?page={{ recipelist.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                        <span class="current">
+                            Page {{ recipelist.number }} of {{ recipelist.paginator.num_pages }}.
+                        </span>
+
+                    {% if recipelist.has_next %}
+                        <a href="?page={{ recipelist.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+        {% endif %}
+    <script id="pagination-template" type="text/x-handlebars-template"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    </body>
+</html>
