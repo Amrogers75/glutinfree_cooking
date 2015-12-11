@@ -24,7 +24,7 @@ from slugify import slugify
 django.setup()
 
 
-param_dict = {'key': settings.F2FKEY, 'sort': 'r', 'page': '28'}
+param_dict = {'key': settings.F2FKEY, 'sort': 'r', 'page': '17'}
 response = requests.get('http://food2fork.com/api/search/recipes.json', params=param_dict)
 
 response_dict = response.json()
