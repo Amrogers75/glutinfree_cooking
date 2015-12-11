@@ -1,0 +1,15 @@
+{{#if recipes}}
+    <span class="step-links">
+        {{#if previous_page}}
+            <a id='{{previous_page}}' class="page-button" href='#'>previous</a>
+        {{/if}}
+
+            <span class="current">
+                Page {{ current_page }} of {{ all_pages }}.
+            </span>
+
+        {{#if next_page}}
+            <a id='{{next_page}}' class="page-button" href="#">next</a>
+        {{/if}}
+    </span>
+{{/if }}

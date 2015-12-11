@@ -1,0 +1,9 @@
+{{#each recipes}}
+    <div class="row">
+      <div class="col-md-12 recipe" id="{{ pk }}">
+        <h2 id="{{ pk }}"> {{ title }}, {{ social_rank }}</h2>
+        <img href='{{ recipe_image }}'>
+        <p><a class="btn btn-default" href="#recipe-detail/{{ pk }}" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+{{/each}}
